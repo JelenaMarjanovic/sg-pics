@@ -1,13 +1,23 @@
-import SearchBar from './components/SearchBar';
+import { useState } from 'react';
 
 function App() {
-  const handleSubmit = (term) => {
-    console.log('Do a search with', term);
+  const [text, setText] = useState('');
+
+  const handleChange = (event) => {
+    setText(event.target.value);
   };
 
   return (
     <div>
-      <SearchBar onSubmit={handleSubmit} />
+      <div>
+        Enter some text
+      </div>
+      <input value={text} onChange={handleChange} />
+
+      <h3>Your Text</h3>
+      <p>
+        {text}
+      </p>
     </div>
   );
 }
