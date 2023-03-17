@@ -1,5 +1,5 @@
 function ImageShow({ image }) {
-  return <div>ID: {image.id}</div>;
+  return <div>ID: {image.alt_description}</div>;
 }
 
 export default ImageShow;
